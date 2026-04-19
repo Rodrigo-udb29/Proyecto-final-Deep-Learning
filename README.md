@@ -34,7 +34,7 @@ El dataset es fuertemente desbalanceado (78% positive), así que reportamos F1 m
 
 ## Cómo reproducir
 
-Los notebooks están pensados para correr en **Kaggle con GPU T4**. No intentes correrlos en local sin GPU — NB4 (inferencia RoBERTa sobre 568k reseñas) tarda unas 3 horas, y NB6a (fine-tuning T5) otro tanto.
+Los notebooks están pensados para correr en **Kaggle con GPU T4**. No en local sin GPU — NB4 (inferencia RoBERTa sobre 568k reseñas) tarda unas 3 horas, y NB6a (fine-tuning T5) otro tanto.
 
 ### Pasos
 
@@ -71,7 +71,7 @@ Si usas otro username en Kaggle, hay que ajustar los paths que apuntan a `/kaggl
 | Precision macro | 0.7197 | **0.7540** | 0.6157 |
 | Recall macro | **0.7665** | 0.7230 | 0.6182 |
 
-Interesante: no hay un ganador absoluto entre MLP y CNN. La CNN gana accuracy y precision; el MLP gana recall y F1 macro (mejor equilibrio entre clases). El Transformer zero-shot queda por debajo — lo atribuimos a *domain shift* (el modelo fue preentrenado sobre tweets, no reseñas de comida).
+no hay un ganador absoluto entre MLP y CNN. La CNN gana accuracy y precision; el MLP gana recall y F1 macro (mejor equilibrio entre clases). El Transformer zero-shot queda por debajo — lo atribuimos a *domain shift* (el modelo fue preentrenado sobre tweets, no reseñas de comida).
 
 **Generativo (ROUGE, 500 muestras del TEST):**
 
